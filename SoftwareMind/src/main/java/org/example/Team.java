@@ -13,7 +13,7 @@ public class Team {
     public double calculateAverageRate() {
         double totalRate = 0.0;
         for (Individual member : members) {
-            totalRate += member.rate();
+            totalRate += member.getRate();
         }
         return totalRate / members.size();
     }
@@ -21,7 +21,7 @@ public class Team {
     @Override
     public String toString() {
         return members.size() +
-                " players (" + members +
+                " players (" + members.toString().replaceAll("[\\[\\]]", "") +
                 "). Average rate:" + calculateAverageRate();
     }
 }
