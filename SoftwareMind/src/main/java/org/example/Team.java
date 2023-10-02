@@ -7,6 +7,10 @@ import java.util.List;
 public class Team {
     private final List<Individual> members = new ArrayList<>();
 
+    public List<Individual> getMembers() {
+        return members;
+    }
+
     public boolean addMember(Individual individual) {
         return members.add(individual);
     }
@@ -24,6 +28,6 @@ public class Team {
         members.sort(Comparator.comparing(Individual::getName));
         return members.size() +
                 " players (" + members.toString().replaceAll("[\\[\\]]", "") +
-                "). Average rate:" + calculateAverageRate();
+                "). Average rate: " + calculateAverageRate();
     }
 }
