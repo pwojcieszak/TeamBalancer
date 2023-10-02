@@ -14,7 +14,7 @@ There are plenty of ways of executing test classes, I will describe just two of 
 5. Maven will start the testing process, and it will run all the tests in your project. You will see the test results in the command prompt or terminal window.
 
 
-If you want to run a specific test class or a single test method, you can use the -Dtest option followed by the test class or method name. For example, to run a specific test class named MyTest, you can use the following command:
+If you want to run a specific test class or a single test method, you can use the -Dtest option followed by the test class or method name. For example, to run test class named TeamTest, you can use the following command:
 `mvn test -Dtest=TeamTest`
 
 To run a specific test method within a test class, you can provide the full method name like this:
