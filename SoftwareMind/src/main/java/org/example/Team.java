@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Team {
@@ -20,6 +21,7 @@ public class Team {
 
     @Override
     public String toString() {
+        members.sort(Comparator.comparing(Individual::getName));
         return members.size() +
                 " players (" + members.toString().replaceAll("[\\[\\]]", "") +
                 "). Average rate:" + calculateAverageRate();
