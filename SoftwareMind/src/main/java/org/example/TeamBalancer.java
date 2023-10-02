@@ -17,6 +17,10 @@ public class TeamBalancer {
         int numberOfTeams = 3;
         List<Team> teams = balance(individuals, numberOfTeams);
 
+        printTeams(teams);
+    }
+
+    public static void printTeams(List<Team> teams) {
         int teamNo = 1;
         for (Team team : teams) {
             System.out.println("Team no " + teamNo++ + " has " + team);
@@ -26,12 +30,12 @@ public class TeamBalancer {
         System.out.println("Teams rate standard deviation: " + formattedStandardDeviation);
     }
 
-    private static List<Team> balance(List<Individual> individuals, int numberOfTeams) throws BalancingException {
-        if(individuals.size() % numberOfTeams != 0)
+    public static List<Team> balance(List<Individual> individuals, int numberOfTeams) throws BalancingException {
+        if(individuals.isEmpty() || numberOfTeams < 1 || individuals.size() % numberOfTeams != 0)
             throw new BalancingException("Equal number of members in teams is not achievable");
 
-        individuals.sort(Comparator.comparingInt(Individual::getRate));
-        System.out.println(individuals);
+        individuals.sort(Comparator.comparingDouble(Individual::getRate));
+
         List<Team> teams = new ArrayList<>();
         for (int i = 0; i < numberOfTeams; i++) {
             teams.add(new Team());
@@ -56,7 +60,7 @@ public class TeamBalancer {
 
     }
 
-    private static double calculateDeviation(List<Team> teams) {
+   public static double calculateDeviation(List<Team> teams) {
         double sum = 0;
         for (Team team : teams)
             sum += team.calculateAverageRate();
