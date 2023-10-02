@@ -1,5 +1,5 @@
 # TeamBalancer
-The Team Balancer project is a Java application that divides a group of individuals into teams of equal size while attempting to balance the teams based on their "rate" attributes. It's created as a interview task from Software Mind. 
+The Team Balancer project is a Java application that divides a group of individuals into teams of equal size while attempting to balance the teams based on their "rate" attributes. It's a interview task from Software Mind. 
 There are plenty of ways of executing test classes, I will describe just two of them. 
 
 # Running test suite using Maven in Command Line
