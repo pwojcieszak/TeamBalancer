@@ -1,13 +1,13 @@
 package org.example;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TeamBalancerTest {
+public class TeamBalancerTest {
     @Test
     public void shouldThrowWhenListOfIndividualsIsEmpty() {
         int numberOfTeams = 4;
