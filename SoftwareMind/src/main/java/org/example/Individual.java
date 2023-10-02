@@ -2,9 +2,9 @@ package org.example;
 
 public class Individual {
     private String name;
-    private int rate;
+    private double rate;
 
-    public Individual(String name, int rate) {
+    public Individual(String name, double rate) {
         this.name = name;
         this.rate = rate;
     }
@@ -13,7 +13,7 @@ public class Individual {
         return name;
     }
 
-    public int getRate() {
+    public double getRate() {
         return rate;
     }
 
